@@ -1,0 +1,59 @@
+{
+  "root": true,
+  "extends": ["eslint:recommended", "plugin:react/recommended", "google"],
+  "parser": "babel-eslint",
+  "plugins": ["babel", "i18n", "react", "react-hooks", "import"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "jquery": true
+  },
+  "rules": {
+    "arrow-spacing": 2,
+    "camelcase": 2,
+    "indent": [
+      "error",
+      2,
+      {
+        "ignoreComments": true,
+        "MemberExpression": 1,
+        "SwitchCase": 1,
+        "VariableDeclarator": "first"
+      }
+    ],
+    "jsx-quotes": ["error", "prefer-double"],
+    "linebreak-style": 0,
+    "no-console": 0,
+    "no-unused-vars": [
+      "error",
+      {
+        "caughtErrors": "all"
+      }
+    ],
+    "no-invalid-this": 0,
+    "babel/no-invalid-this": 0,
+    "object-curly-spacing": ["error", "always"],
+    "require-jsdoc": 0,
+    "space-infix-ops": 2,
+    "valid-jsdoc": 0,
+    "i18n/no-chinese-character": 2,
+    "react/sort-comp": 2,
+    // "react-hooks/exhaustive-deps": 2,
+    "react-hooks/rules-of-hooks": 2,
+    "max-len": [2, {
+      "code": 120,
+      "ignorePattern": "^import\\W.*"
+      }]
+  },
+  "globals": {
+    "SockJS": true,
+    "Stomp": true
+    // TODO:websocket tool change maybe socket.io
+  }
+}

@@ -1,0 +1,6 @@
+*.test.js
+build
+dist
+lib
+node_modules
+template
